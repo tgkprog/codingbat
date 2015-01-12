@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+
+	<aop:aspectj-autoproxy />
+
+
+
+	<bean id="simpleServiceBean" class="academic.aop1.MyService">
+		<property name="name" value="Joe Al Daks" />
+		<property name="id" value="12345" />
+	</bean>
+
+	<bean id="lopMain" class="academic.aop1.sd.Lop" />
+	<alias alias="lop" name="lopMain" />
+
+	<bean id="ABeanMain" class="academic.aop1.ABean" />
+	<alias alias="ABean" name="ABeanMain" />
+	
+	<bean id="doAroundMethodBean" class="academic.aops.advices.MyAround" />
+
+	<bean id="doBeforeMethodBean" class="academic.aops.advices.MyBefore" />
+
+	<!-- <bean id="simpleServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean"> <property name="target" ref="simpleServiceBean" 
+		/> <property name="interceptorNames"> <list> <value>doBeforeMethodBean</value> <value>doAroundMethodBean</value> </list> </property> </bean> -->
+	<alias alias="simpleServiceAlias" name="simpleServiceBean" />
+
+
+	<bean name="aroundLogger" class="academic.aops.advices.AroundLog" />
+	<aop:config>
+		<aop:aspect ref="aroundLogger" id="aroundLoggerAspect" order="1">
+			<aop:pointcut expression="execution(* academic.aop1.**.*(..)) or execution(* academic.aop1.sd.**.*(..)) " id="doForAll1" />
+			<aop:around method="doAroundMethodBean" pointcut-ref="doForAll1" arg-names="proceedingJoinPoint" />
+		</aop:aspect>
+	</aop:config>
+</beans>
