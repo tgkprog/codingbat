@@ -1,5 +1,8 @@
 package org.moh.academic;
 
+/**
+Target function and test harness
+*/
 public class FourParams {
 
 	public static void main(String[] args) {
@@ -12,24 +15,15 @@ public class FourParams {
 	private int errs;
 
 	/** Target function
-	 * 
-	 * @param bonus
-	 * @param multiply
-	 * @param first
-	 * @param second
-	 * @return result
+	 *
 	 */
 	public int fourParams(boolean bonus, boolean multiply, int first, int second) {
 		return first + second;
 	}
 
-	/** harness call target
-	 
-	 * @param bonus
-	 * @param multiply
-	 * @param first
-	 * @param second
-	 * @param expected
+	/** Test harness call target
+
+		Same parameters as target plus the return type - expected value.
 	 */
 	void testFourParams(boolean bonus, boolean multiply, int first, int second, int expected) {
 		int actual = 0;
@@ -48,6 +42,8 @@ public class FourParams {
 		}
 	}
 
+	/*** different test cases - more the better to adequately test the target function for all requirements per the question
+	*/
 	private void testCases() {
 		testFourParams(false, false, 1, 1, 2);
 		testFourParams(false, false, 1, 12, 13);
