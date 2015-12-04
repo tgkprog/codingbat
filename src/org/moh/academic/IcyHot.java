@@ -1,6 +1,23 @@
 
 /**
-Target function and, unit test cases and test helper
+ * 
+ * Make a class with a main method, the target method , test helper and test cases function
+
+* Your question will be different than Icy Hot, with different parameters and requirement.
+IcyHot is just a sample. 
+
+* You can copy the structure of IcyHot
+I will judge on test cases (different test data, testing edge cases, to properly test the requirements)
+
+* Its not J Unit style, but is single class with solution and unit test cases with main method.
+
+* Main method calls Test cases function
+
+* Test cases function calls test helper function repeatedly with different test data and expected value
+
+* test helper calls target function and compares actual return with expected
+
+* Target function and, unit test cases and test helper
 
 Run in command prompt:
 cd c:\j
