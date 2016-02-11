@@ -19,7 +19,7 @@ I will judge on test cases (different test data, testing edge cases, to properly
 
 * Target function and, unit test cases and test helper
 
-Run in command prompt:
+Run in command prompt (not required if doing in spring):
 cd c:\j
 c:
 javac c:\j\IcyHot.java
