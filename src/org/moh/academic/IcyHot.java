@@ -29,7 +29,9 @@ java IcyHot
 public class IcyHot {
 
 	public static void main(String[] args) {
-
+                double t = 454 / 3;
+		int c = (int) (454/3);
+		System.out.println("dou t is : " + t + " and c is " + c);
 		IcyHot app = new IcyHot();
 		app.icyHotTestCases();
 
