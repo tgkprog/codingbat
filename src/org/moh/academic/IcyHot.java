@@ -37,6 +37,9 @@ public class IcyHot {
 
 		IcyHot app = new IcyHot();
 		System.out.println("get 2 : " + app.getVideo(2) );
+		System.out.println("get 5 : " + app.getVideo(5) );
+		System.out.println("get 12 : " + app.getVideo(12) );
+		System.out.println("get -2 : " + app.getVideo(-2) );
 		//app.icyHotTestCases();
 
 	}
@@ -51,7 +54,7 @@ public class IcyHot {
 			return "Ben & holly";
 		}else{
 				return "matrix";
-			}
+		}
 	}
 
 	/**
