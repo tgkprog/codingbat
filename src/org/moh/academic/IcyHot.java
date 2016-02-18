@@ -1,10 +1,12 @@
+//package
 
+import java.util.ArrayList;
 /**
- * 
+ *
  * Make a class with a main method, the target method , test helper and test cases function
 
 * Your question will be different than Icy Hot, with different parameters and requirement.
-IcyHot is just a sample. 
+IcyHot is just a sample.
 
 * You can copy the structure of IcyHot
 I will judge on test cases (different test data, testing edge cases, to properly test the requirements)
@@ -29,38 +31,50 @@ java IcyHot
 public class IcyHot {
 
 	public static void main(String[] args) {
-                double t = 454 / 3;
+		double t = 454 / 3;
 		int c = (int) (454/3);
 		System.out.println("dou t is : " + t + " and c is " + c);
+
 		IcyHot app = new IcyHot();
-		app.icyHotTestCases();
+		System.out.println("get 2 : " + app.getVideo(2) );
+		//app.icyHotTestCases();
 
 	}
 
 	private int index;
 	private int errs;
 
-	/** 
-	* Target function, this function is the main function to implement. The signature should be same as 
+	String getVideo(int age){
+		if(age >=0 &&age <=4){
+			return "Peppa pig";
+		}else if (age > 4 &&age <=10){
+			return "Ben & holly";
+		}else{
+				return "matrix";
+			}
+	}
+
+	/**
+	* Target function, this function is the main function to implement. The signature should be same as
 	in your question.
-	Can use online tool to test it. In your java file can have system out println but for online 
+	Can use online tool to test it. In your java file can have system out println but for online
 	test might have to comment that out or wont run.
 	Following is simple question, real one will be a little more complex.
 	Remember :
 	copy this template but rename all functions and change parameters per your problem.
-	
+
 	* Question:
 	 Given two temperatures, return true if one is less than 0 and the other is greater than 100.
 
-		icyHot(120, -1) → true
-		icyHot(-1, 120) → true
-		icyHot(2, 120) → false
+		icyHot(120, -1) ? true
+		icyHot(-1, 120) ? true
+		icyHot(2, 120) ? false
 
 	For debug can have system out println here but in reference website need to comment out.
-	
+
 	 */
 	public boolean icyHot(int temp1, int temp2) {
-		if(temp1 < 0 && temp2> 100)return true;//sample answer, incomplete		
+		if(temp1 < 0 && temp2> 100)return true;//sample answer, incomplete
 		return false;
 	}
 
@@ -68,7 +82,7 @@ public class IcyHot {
 	/** Test helper. This function calls target and checks response - if matches expected.
 
 		* Same parameters as target plus the return type - expected value.
-		* expected value has to be accurately calculated by developer. 
+		* expected value has to be accurately calculated by developer.
 		Type and number of parameters can change depending on your question.
 	 */
 	void testIcyHot(int temp1, int temp2, boolean expected) {
@@ -80,7 +94,7 @@ public class IcyHot {
 			e.printStackTrace();// log it
 			System.err.println("Error " + e);
 		}
-		
+
 		if (actual != expected) {
 			System.out.println("Actual :" + actual + ", expected :" + expected + ", for temp1 :" + temp1 + ", temp2 :" + temp2
 					+ ", index :" + index +".");
@@ -94,7 +108,8 @@ public class IcyHot {
 	  Number of test cases depends on question and number & type of parameters in target.
 	*/
 	private void icyHotTestCases() {
-		System.out.println("IcyHot ");
+		int someVar = 232;
+		System.out.println("IcyHot Train 448 ");
 		testIcyHot(0, 0, false);
 		testIcyHot(0, 101, false);
 		testIcyHot(-1, 101, true);
