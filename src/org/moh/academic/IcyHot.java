@@ -31,31 +31,13 @@ java IcyHot
 public class IcyHot {
 
 	public static void main(String[] args) {
-		double t = 454 / 3;
-		int c = (int) (454/3);
-		System.out.println("dou t is : " + t + " and c is " + c);
-
 		IcyHot app = new IcyHot();
-		System.out.println("get 2 : " + app.getVideo(2) );
-		System.out.println("get 5 : " + app.getVideo(5) );
-		System.out.println("get 12 : " + app.getVideo(12) );
-		System.out.println("get -2 : " + app.getVideo(-2) );
-		//app.icyHotTestCases();
-
+		app.icyHotTestCases();
 	}
 
 	private int index;
 	private int errs;
 
-	String getVideo(int age){
-		if(age >=0 &&age <=4){
-			return "Peppa pig";
-		}else if (age > 4 &&age <=10){
-			return "Ben & holly";
-		}else{
-				return "matrix";
-		}
-	}
 
 	/**
 	* Target function, this function is the main function to implement. The signature should be same as
