@@ -4,9 +4,10 @@ import java.util.ArrayList;
 /**
  *
  * Make a class with a main method, the target method , test helper and test cases function
+ * Read all instructions. Twice (comments in this calss).
 
 * Your question will be different than Icy Hot, with different parameters and requirement.
-IcyHot is just a sample.
+IcyHot is a sample.
 
 * You can copy the structure of IcyHot
 I will judge on test cases (different test data, testing edge cases, to properly test the requirements)
@@ -20,8 +21,9 @@ I will judge on test cases (different test data, testing edge cases, to properly
 * test helper calls target function and compares actual return with expected
 
 * Target function and, unit test cases and test helper
+* Change the file encoding in your IDE as some characters are outsode of ASCII 255.
 
-Run in command prompt (not required if doing in spring):
+Run in command prompt (not required if doing in IDE):
 cd c:\j
 c:
 javac c:\j\IcyHot.java
@@ -51,9 +53,9 @@ public class IcyHot {
 	* Question:
 	 Given two temperatures, return true if one is less than 0 and the other is greater than 100.
 
-		icyHot(120, -1) ? true
-		icyHot(-1, 120) ? true
-		icyHot(2, 120) ? false
+		icyHot(120, -1) : true
+		icyHot(-1, 120) : true
+		icyHot(2, 120) : false
 
 	For debug can have system out println here but in reference website need to comment out.
 
@@ -88,9 +90,10 @@ public class IcyHot {
 	}
 
 	/**
-	* Different test cases - more the better to adequately test the target function for all
+	* Different test cases - more the better. To adequately test the target function for all
     	requirements per the question.
 	  Number of test cases depends on question and number & type of parameters in target.
+	  You need to think of the values. Think of edge cases and make sure question scenarios are covrered.
 	*/
 	private void icyHotTestCases() {
 		int someVar = 232;
