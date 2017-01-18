@@ -1,7 +1,8 @@
 package academic;
 
 /**
-Target function and, unit test cases and test helper
+Target function and, unit test cases and test helper.
+Xy test
 */
 public class FourParams {
 
