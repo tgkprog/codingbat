@@ -1,4 +1,4 @@
-//package
+//no package
 
 import java.util.ArrayList;
 /**
@@ -37,7 +37,7 @@ public class IcyHot {
 		app.icyHotTestCases();
 	}
 
-	private int index;
+	private int count;
 	private int errs;
 
 
@@ -74,7 +74,7 @@ public class IcyHot {
 	 */
 	void testIcyHot(int temp1, int temp2, boolean expected) {
 		boolean actual = false;
-		index++;
+		count++;
 		try {
 			actual = icyHot(temp1, temp2);
 		} catch (Throwable e) {
@@ -84,7 +84,7 @@ public class IcyHot {
 
 		if (actual != expected) {
 			System.out.println("Actual :" + actual + ", expected :" + expected + ", for temp1 :" + temp1 + ", temp2 :" + temp2
-					+ ", index :" + index +".");
+					+ ", count :" + count +".");
 			errs++;
 		}
 	}
@@ -104,7 +104,7 @@ public class IcyHot {
 		testIcyHot(500, -101, true);
 		testIcyHot(0, 101,false);
 		testIcyHot(-100, 1999, true);
-		System.out.println("Icy Hot index " + index + ", Errors :" + errs + ".");
+		System.out.println("Icy Hot test cases count " + count + ", Errors (test case expected value wrong or implmentaion wrong or problem understanding wrong):" + errs + ".");
 	}
 
 }
