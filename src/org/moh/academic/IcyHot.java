@@ -44,13 +44,9 @@ public class IcyHot {
     /**
      * Target function, this function is the main function to implement. The signature should be same as
      in your question.
-     Can use online tool to test it. In your java file can have system out println but for online
-     test might have to comment that out or wont run.
-     Following is simple question, real one will be a little more complex.
-     Remember :
-     copy this template but rename all functions and change parameters per your problem.
+     
 
-     * Question:
+     * Sample Question:
      Given two temperatures, return true if one is less than 0 and the other is greater than 100.
 
      icyHot(120, -1) : true
